@@ -9,7 +9,13 @@ def home():
 #@app.route("/data",methods=['POST','GET'])
 #def data():
 #	return render_template('home1.html')
+@app.route("/about_us")
+def about_us():
+	return("helo")
 
+@app.route("/projects")
+def projects():
+	return("welcome")
 
 if __name__ == '__main__':
     app.run(debug=True)
