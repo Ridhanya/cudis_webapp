@@ -6,9 +6,11 @@ app = Flask(__name__,template_folder='templates',static_folder='static')
 def home():
 	return render_template('home.html')
 
-#@app.route("/data",methods=['POST','GET'])
-#def data():
-#	return render_template('home1.html')
+@app.route("/home")
+def home_again():
+	return render_template('home.html')
+
+
 @app.route("/about_us")
 def about_us():
 	return("helo")
@@ -23,8 +25,10 @@ def data():
  
 @app.route("/data_collect", methods=['POST','GET'])
 def data_collect():
-	if request.method=="POST":
-		return "true"
+	if (request.method=="POST"):
+		c=request.form["gene"]
+		return(c)
+	return("failed")
 	
 if __name__ == '__main__':
     app.run(debug=True)
