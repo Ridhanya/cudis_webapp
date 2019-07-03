@@ -6,4 +6,6 @@ Requirements:
 1.Install flask
 2.Install a good editor (like sublime,pycharm) for html,css,javascript and python
 3.Install Mysql
+4.pip install Flask-Mail
+5.Install necessary package for connecting flask to Mysql
 
