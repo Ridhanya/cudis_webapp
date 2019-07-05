@@ -101,6 +101,10 @@ def himanshu():
 def raidha():
 	return render_template('raidha.html')
 
+@app.route("/drrajanikanth")
+def drrajinikanth():
+	return render_template('rajanikanth.html')
+
 	
 if __name__ == '__main__':
     app.run(debug=True)
