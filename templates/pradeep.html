@@ -9,39 +9,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body class="Basic_style">
-  <div>
+
+<body>
+	<div>
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <h2 class="navbar-brand header_style_nav">CuDIS</h2>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Data</a></li>
-      <li ><a href="#">Results</a></li>
+      <li ><a href="{{url_for('data')}}">Data</a></li>
+      <li ><a href="#">Result</a></li>
       <li><a href="{{url_for('home_again')}}">Home</a></li>
     </ul>
   </div>
 </nav>
 </div>
-  
 
-<div class="form-style-data">
-<div class="container col-md-4 col-md-offset-4 ">
-  <h2 class="header">Organelle-Mitochondria</h2>
-  <form action="{{url_for('data_collect')}}" method="POST">
-    <div class="form-group">
-      <label for="text">Gene:</label>
-      <input type="text" class="form-control" id="text" placeholder="Enter gene name" name="gene">
-    </div>
-    
-    <div class="checkbox">
-      <label><input type="checkbox" name="history">show history</label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
+<div class="container">
+  <div>
+    <img class="img-responsive" src="static\images\Pradeep_resized.jpg" alt="Pradeep" width=200 height=100>
+    <p><b>PRADEEP VARATHAN</b></p>
+    <p>Undergrad biotechnology student from NIT Calicut and now a graduate student in bioinformatics at IUPUI, and have always been an enthusiast when it comes over to the fields of interest, including bioinformatics and rudimentary biology. Hoping to contribute more to health care to accelerate development.</p>
+  </div>
 </div>
-</div>
-
 </body>
-</html>

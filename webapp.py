@@ -74,6 +74,33 @@ def result_contact():
 		mail.send(msg)
 		return render_template("result_success_contact.html")
 	return render_template("result_failure_contact")
+
+@app.route("/pradeep")
+def pradeep():
+	return render_template('pradeep.html')
+
+@app.route("/sairam")
+def sairam():
+	return render_template('sairam.html')
+
+@app.route("/ridhanya")
+def ridhanya():
+	return render_template('ridhanya.html')
+
+@app.route("/angela")
+def angela():
+	return render_template('angela.html')
+@app.route("/anubhav")
+def anubhav():
+	return render_template('anubhav.html')
+@app.route("/himanshu")
+def himanshu():
+	return render_template('himanshu.html')
+
+@app.route("/raidha")
+def raidha():
+	return render_template('raidha.html')
+
 	
 if __name__ == '__main__':
     app.run(debug=True)
