@@ -29,7 +29,7 @@ def home_again():
 
 @app.route("/about_us")
 def about_us():
-	return("helo")
+	return render_template('about_us.html')
 
 @app.route("/contact_us")
 def contact_us():
