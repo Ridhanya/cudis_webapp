@@ -5,7 +5,7 @@ This project uses python,Javascript,HTML,CSS,Bootstrap for website development a
 Requirements:
 1.Install flask
 2.Install a good editor (like sublime,pycharm) for html,css,javascript and python
-3.Install Mysql
+3.Install sqlite
 4.pip install Flask-Mail
-5.Install necessary package for connecting flask to Mysql
+
 
