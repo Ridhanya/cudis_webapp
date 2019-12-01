@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+         <thead>
+            <td>GENE</td>
+            <td>PROTEIN</td>
+            <td>PATHWAY</td>
+            <td>FUNCTION_M</td>
+            <td>REGULATION</td>
+            <td>HTS_MTS</td>
+            <td>ORGANISM</td>
+            <td>RELATED_GENES</td>
+            <td>BIOMARKER</td>
+            <td>REFERENCES</td>
+            <td>EXTRA_INFO</td>
+            <td>OTHER_RELATIONS</td>
+
+         </thead>
+         
+         {% for r in row %}
+            <tr>
+               <td>{{r["GENE"]}}</td>   
+               <td>{{r["PROTEIN"]}}</td>
+               <td>{{r["PATHWAY"]}}</td>
+               <td>{{r["FUNCTION_M"]}}</td>
+               <td>{{r["REGULATION"]}}</td>
+               <td>{{r["HTS_MTS"]}}</td>
+               <td>{{r["ORGANISM"]}}</td>
+               <td>{{r["RELATED_GENES"]}}</td>
+               <td>{{r["BIOMARKER"]}}</td>
+               <td>{{r["REFERENCES"]}}</td>
+               <td>{{r["EXTRA_INFO"]}}</td>
+               <td>{{r["OTHER_RELATIONS"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      
+   </body>
+</html>
