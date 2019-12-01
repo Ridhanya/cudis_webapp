@@ -1,14 +1,24 @@
 from flask import Flask,redirect,url_for,request,render_template,make_response
 from flask_mysqldb import MySQL
 from flask_mail import Mail, Message
+import cx_Oracle
+import sqlite3 as sql
 app = Flask(__name__,template_folder='templates',static_folder='static')
+database="C:\\sqlite\\cudis.db"
 
-mysql = MySQL(app)
-app.config['MYSQL_DATABASE_USER'] = 'Ridhanya'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'jasrid22'
-app.config['MYSQL_DATABASE_DB'] = 'cudis'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+"""mysql = MySQL(app)
+#app = Flask(__name__,template_folder='templates',static_folder='static')
+app.config['MYSQL_DATABASE_USER'] = "root"
+app.config['MYSQL_DATABASE_PASSWORD'] = ""
+app.config['MYSQL_DATABASE_DB'] = "test"
+app.config['MYSQL_DATABASE_HOST'] = "127.0.0.1"
 mysql.init_app(app)
+#mysql = MySQL(app)"""
+
+
+"""dsn_tns = cx_Oracle.makedsn('DESKTOP-V5J66MT', '1521', service_name='XE') 
+conn = cx_Oracle.connect(user='SYSTEM', password='SBTNITC', dsn=dsn_tns)"""
+
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -41,25 +51,39 @@ def data():
  
 @app.route("/data_collect", methods=['POST','GET'])
 def data_collect():
+	#curr=mysql.connection.cursor()
 	if (request.method=="POST"):
-		c=request.form["gene"]
+		inptext=request.form["gene"]
+		con = sql.connect(database)
+		con.row_factory =sql.Row
+		cur=con.cursor()
+		cur.execute("select * from MITO where gene=?",(inptext,))
+		row=cur.fetchall()
+        
 		#mysql=MySQL(app)
 		#app.config['MYSQL_DATABASE_USER'] = 'Ridhanya'
 		#app.config['MYSQL_DATABASE_PASSWORD'] = 'jasrid22'
 		#app.config['MYSQL_DATABASE_DB'] = 'cudis'
 		#app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 		#mysql.init_app(app)
+		"""c = conn.cursor()
+		c.execute('select * from XE.test where GENE=inptext')
+		for row in c:
+			print(row[0], '-', row[1])"""
 
 
 
 
 
 
-		conn=mysql.connect()
+		"""conn=mysql.connect()
 		cursor=conn.cursor()
-		cursor.execute("SELECT * from gene where genename='c'")
+		cursor.execute("INSERT INTO  emp values(c)")
 		data=cursor.fetchone()
-		return(data)
+		return(c)"""
+		#print(row)
+		#print("success")
+		return render_template("list.html",row = row)
 		
 	return("failed")
 @app.route("/result_contact", methods=['POST','GET'])
@@ -107,4 +131,5 @@ def drrajinikanth():
 
 	
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+     app.run(host='127.0.0.1',port='3307')

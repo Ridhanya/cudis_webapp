@@ -1,0 +1,197 @@
+use cudis;
+create table mito
+(gene 			text,
+protein			text,
+pathway			text,		
+function_m		text,
+regulation		text,
+hts_mts			text,
+organism		text,
+related_genes		text,
+biomarker		text,
+reference_s		text,
+extra_info		text,
+other_relations		text
+)
+
+
+use cudis;
+insert into mito
+values
+('BNIP3',	'BCL2/adenovirus E1B 19kDa interacting protein 3',	'BECLIN BCL2',	'Mitophagy',	'activates excessive mitophagy',	'Knock out mice ',	'mice, in vitro stroke models',	'BNIP3L',	'Target',	'10.1111/cns.12325',	'-',	'-'),
+											
+('BNIP3',	'BCL2/adenovirus E1B 19kDa interacting protein 3',	'BECLIN BCL2',	'Mitophagy',	'attenuated by 2ME2 treatment',	'-',	'mice',	'HIF-1?',	'Target',	'10.1111/jnc.12708',	'-',	'Drug:2-methoxyestradiol (2ME2)'),
+											
+('BECN1',	'Beclin-1',	'BECLIN BCL2',	'Mitophagy',	'enhances mitophagy',	'Transmission electron microscopy',	'-',	'LC3-II',	'Target',	'10.1016/j.bbrc.2014.01.032',	'-',	'Drug:Rapamycin'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'complete deficiency',	'Knock out studies',	'Mice ( Neutrophils)',	'TNF?, IL-1?, and MCP1',	'Target',	'10.1016/j.expneurol.2017.08.016',	'Neutrophils mediated ischemic injury',	'-'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'upregulation',	'qRT-PCR , Western blot',	'MCOA model Rats',	'SOCS3,STAT3',	'Target',	'10.1080/01616412.2017.1352187',	'protective effect of HNG might be related to the SOCS3 - STAT3 - MCL-1 pathway.',	'Drug: HNG'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'upregulation',	'luciferase, LDH , MCOA studies',	'Sprague Dawley rats (MCOA) & PC12 cells',	'BCL-2',	'Target',	'10.1007/s12035-016-9842-1',	' Mcl-1 was the target gene of miR-106b-5p;miR-106b-5p inhibitor increased the Mcl-1 and Bcl-2 expression',	'miRNA:miR-106b-5p'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'upregulation',	'MCOA studies, in vitro',	'MCOA model Rats',	'BCL-2',	'Target',	'10.1016/j.ejphar.2015.10.027',	' neuroprotective effect of baicalin partially due to MRTF-A-mediated transactivity and expression of MCL-1 and BCL-2 by triggering the CArG box, which might be controlled by the activation of PI3K and ERK1/2',	'Drug: Baicalin'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'upregulation',	'post-drug treatment',	'Cortical neuron cells ',	'BCL-2, BAX',	'Target',	'10.1016/j.jsbmb.2015.04.007',	'diminished the down-regulation of the anti-apoptotic proteins Mcl-1(6) and Bcl-2(7)',	'Drug: Daucosterol'),
+											
+('MCL1',	'Induced myeloid leukemia cell differentiation protein Mcl-1 ',	'BECLIN BCL2',	'Mitophagy',	'upregulation',	'MCOA studies, expression profile',	'MCOA model Rats',	'BCL-2,Beclin-1',	'Target',	'10.1186/1471-2202-14-56',	'expression of Mcl1 is involved in the survival of neuronal cells,Pretreatment with 3-methyladenine attenuated autophagy without affecting the level of Mcl1 protein.',	'-'),
+											
+('DAPK1',	'Death-associated protein kinase 1',	'BECLIN BCL2',	'Mitophagy',	'downregulation',	'crystallographic analysis',	'-',	'-',	'Target',	'10.1021/acs.jmedchem.5b00893',	'Ca(2+)/calmodulin-dependent protein kinase subfamily',	'Drug: kaempferol, morin'),
+											
+('DAPK1',	'Death-associated protein kinase 1',	'BECLIN BCL2',	'Mitophagy',	'downregulation',	'Genetic deletion, DAPK1 uncoupler',	'Adult Mice',	'NMDA, NR2B',	'Target',	'10.1016/j.cell.2009.12.055',	'blocks injurious Ca(2+) influx through NMDA receptor channels at extrasynaptic sites and protects neurons against cerebral ischemic ',	'Uncoupler:NR2B(CT) '),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'inhibition of phosphoregulation',	'Western blot',	'male Sprague-Dawley rats',	'p38 MAPK',	'Target',	'PMID:25366482',	'Cryptotanshinone (CT), isolated from the dried roots of Salvia militorrhiza;upregulation of the proapoptotic protein Bcl-2, as well as decreased levels of the activated form of caspase-3 ',	'Drug:Cryptotanshinone (CT)'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'inhibition of activation',	'MCAO studies',	'Sprague-Dawley rats',	'Bax, Bcl-2',	'Target',	'10.1002/jnr.23306',	'. GKAB also repressed the ischemia-induced increase in the expression of Bax and reversed the decline in expression of Bcl-2;reduction in the release or activation of several mitochondrial proapoptotic molecules, including cytochrome c, caspases 3 and 9, and PARP',	'Ginkgolides A and B'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'downregulation of phosphorelation',	'serum sample studies',	'cortical neuronal cultures &  Adult male 129S2/sv mice',	'AIF',	'Target',	'10.1016/j.brainres.2010.08.061',	' NBP protects against ischemic damage via multiple mechanisms including mitochondria associated caspase-dependent and -independent apoptotic pathways',	'NBP as a neuroprotective drug'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'inhibition of activation',	'-',	'in vivo',	'PSD-95',	'Target',	'10.1002/jnr.22163',	' PDZ1 domain of PSD-95 in apoptotic cell death in neurons ;PDZ1 can perturb the interaction of GluR6 with PSD-95 and suppress the assembly of the GluR6.PSD-95.MLK3 signaling module and therefore inhibit JNK activation. Thus, it not only inhibits phosphorylation of c-Jun and down-regulates Fas ligand expression but also inhibits phosphorylation of 14-3-3 and decreases Bax translocation to mitochondria, decreases the release of cytochrome c, and decreases caspase-3 activation. ',	'GluR6 c-terminus containing peptide'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'replacement of JNK1 by JNK2&3',	'MCAo TUNEL staining',	'Mice',	'JNK2,JNK3,MKK4,MKK7',	'Biomarker',	'10.1016/j.mcn.2009.02.012',	'NK1 goes and JNK3 comes" might be essential for the initiation of apoptosis',	'-'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'Inhibition',	'OGDR & MCAO TUNEL staining',	'in vivo & in vitro',	'BCL2',	'Target',	'10.1016/j.freeradbiomed.2009.02.027',	'TSG inhibited iNOS mRNA expression induced by OGD-R, which may be mediated by the activation of SIRT1 and inhibition of NF-kappaB activation',	' 2,3,5,4''-tetrahydroxystilbene-2-O-beta-D-glucoside (TSG), an active component of the rhizome extract from Polygonum multiflorum'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'inhibition of JNK1 and 2',	'MCAO',	'SK-N-BE neuroblastoma cells & rats',	'BACE 1',	'Target',	'10.1111/j.1471-4159.2008.05858.x',	'Paper related to ischemic injury in alzheimers',	'-'),
+											
+('JNK',		'c-Jun N-terminal Kinases',	'BECLIN BCL2',	'Mitophagy',	'inhibition of JNK cascade',	'viral overexpression',	'In vitro',	'ASK1, Hsp27,MKK4',	'Target',	'10.1523/JNEUROSCI.4407-08.2008',	'-',	'-'),
+											
+('BAD',		'Bcl-2-associated death promoter',	'BECLIN BCL2',	'Mitophagy',	'downregulation',	'Electroretinography (ERG) test,co-immunoprecipitation,Western blot & TEM',	'-',	'BAX,PUMA,APAF1,p53',	'Target',	'PMID:22882854',	'Methanesulfonic acid sodium salt (Dipyrone), an antipyretic and analgesic drug, has been demonstrated to improve cerebral ischemia through the inhibition of mitochondrial cell death cascades.',	'Drug:Methanesulfonic acid sodium salt (Dipyrone)'),
+											
+('BAD',		'Bcl-2-associated death promoter',	'BECLIN BCL2',	'Mitophagy',	'phosphorylation',	'OGD,proteomics',	'rat (hippocampal synaptosomes)',	'?PKC ,PP2A',	'Target',	'10.1371/journal.pone.0022057',	' ?PKC initiates cytochrome c release via phosphorylation of PP2A and subsequent dephosphorylation of Bad ',	'-'),
+											
+('BCL2',	'B-cell lymphoma 2(Bcl-2)',	'BECLIN BCL2',	'Mitophagy',	'low',	'IMR32 cells were differentiated using retinoic acid and challenged with different doses of rutin for 24?h duration ,invitro',	'differentiated human neuroblastoma cells (IMR32)',	'Caspase-3 , survivin ',	'Target',	' 10.1016/j.biopha.2018.09.021',	'-',	'-'),
+											
+('BCL2',	'B-cell lymphoma 2(Bcl-2)',	'BECLIN BCL2',	'Mitophagy',	'low',	'SH?SY5Y cells were exposed to oxygen?glucose deprivation (OGD) to simulate an ischemic model invitro',	'SH?SY5Y cells ',	'caspase?9,caspase?3,bax,c-jun,p-c-JUN,p-p53,p-JNK,p-p38,MAPK',	'Target',	' 10.3892/mmr.2018.9305',	'-',	'-'),
+											
+('BCL2',	'B-cell lymphoma 2(Bcl-2)',	'BECLIN BCL2',	'Mitophagy',	'LOW',	'lactate dehydrogenase (LDH) assay and 2,3,5?triphenyltetrazolium chloride (TTC) staining, invitro',	' Rat hippocampal slice injury',	'bax,cyt-c,apaf-1,caspase-9,SQSTM1,caspase-7,caspase-3,LC3',	'Target',	' 10.3892/ijmm.2018.3691',	'-',	'-'),
+											
+('BCL2',	'B-cell lymphoma 2(Bcl-2)',	'BECLIN BCL2',	'Mitophagy',	'low',	'Zea Longa''s score criteria ,triphenyltetrazolium chloride staining,hematoxylin and eosin staining, invivo',	'Sprague?Dawley rats ',	'bax,caspase-9,caspase-3,SOD,CAT,GSH-PX',	'Target',	'10.3892/ijmm.2018.3488',	'-',	'-'),
+											
+('BCL2L1',	'Lymphoma-extra largeÿ(Bcl-xL)',	'BECLIN BCL2',	'Mitophagy',	'high',	'PC and transient middle cerebral artery occlusion (MCAO) ,invitro and invivo',	'Sprague-Dawley rats.',	'hspa1a,prdx2',	'Target',	' 10.3389/fnmol.2016.00131',	'-',	'-'),
+											
+('NR4A1',	'nuclear receptor subfamily 4, group A, member 1',	'NUR77',	'Mitophagy',	'induces mitochondrial damage',	'Knock out mice, Immunofluorescence assasys, western blotting,MTTsssays,caspase-3 activity',	'mice',	'Mfn2',	'Target',	'10.1007/s11064-018-2618-4',	'NR4a1 induces mitochondrial damage by disrupting Mfn2-mediated mitophagy',	'-'),
+											
+('BID',		'Truncated BID(tBID)',	'CARDIOLIPIN',	'Mitophagy',	'early activation of mitochondrial apoptosis pathway',	'wild-type and bid-knockout mice',	'mice',	'Bcl-2,CYCS',	'Target',	'10.1074/jbc.M204991200',	'Bid is activated early in neuronal ischemia in a caspase-8-dependent fashion and that Bid is perhaps one of the earliest and most potent activators of the mitochondrial apoptosis pathway',	'-'),
+											
+('BID',		'Truncated BID(tBID)',	'CARDIOLIPIN',	'Mitophagy',	'activation of mitochondrial apoptosis',	'knock-out mouse',	'mouse,cultured mouse neurons',	'CYCS',	'Target',	'10.1159/000048885',	'demise of nerve cells from cerebral ischemia by release of cytochrome c and activation of caspase.',	'-'),
+											
+('BID',		'Truncated BID(tBID)',	'CARDIOLIPIN',	'Mitophagy',	'activation of mitochondrial apoptosis',	'immunofluorescence, Western blotting, quantitative PCR (qPCR) and Mesoscale multiplex analysis',	'wild-type and bid-knockout mice',	'-',	'Target',	'10.3389/fncel.2016.00014',	'BID deficiency is neuroprotective in an in vitro model and modulates the inflammatory response to focal cerebral ischemia in vivo',	'-'),
+											
+('BID',		'Truncated BID(tBID)',	'CARDIOLIPIN',	'Mitophagy',	'activation of mitochondrial apoptosis',	'-',	'mouse,cultured mouse neurons',	'-',	'Target',	'10.1073/pnas.261323298',	'BID and the mitochondrial-amplification pathway promoting caspase activation contributes importantly to neuronal cell death after ischemic insult',	'-'),
+											
+('MtCK',	'Mitochondrial creatine kinase',	'CARDIOLIPIN',	'Mitophagy',	'Necessary',	'-',	'REVIEW',	'',	'Target',	'10.1007/s00726-016-2173-8',	'Creatine and Phospho creatine as supplementation for stroke…not conclusive',	'-'),
+											
+('MtCK',	'Mitochondrial creatine kinase',	'CARDIOLIPIN',	'Mitophagy',	'upregulation',	'brain enzyme study and tissue study',	'Canine',	'other enzymes - creatine kinase isoenzyme',	'Biomarker',	'PMID: 2830684',	'More that two fold increase in the enzyme',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'downregulated after drug',	'MCOA-immunostaining studies',	'Rats',	'Beclin1,Lamp1,mitochondrial p62',	'Biomarker + Target',	'10.1155/2018/4147502',	'some chinese medicine XXMD protects by downregulating the genes',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'downregulated after drug Atorvastatini',	'PMCAO by electrocoagulation;MRI',	'Male Sprague-Dawley rats',	'-',	'Biomarker + Target',	'10.3389/fnins.2018.00405',	'Mostly related to ER stress',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'downregulation for survival',	'MCOA-immunostaining studies-electron microscopy',	'male Sprague-Dawley rats',	'PINK1, Parkin , p62, LAMP-1, Beclin1',	'Biomarker + Target',	'10.1016/j.brainresbull.2018.06.018',	'-',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'downregulation for survival and after drug Hydroxysafflor yellow A',	'MCOA',	'Rats',	'Beclin1, Akt, PI3K',	'Biomarker + Target',	'10.1016/j.brainresbull.2018.05.011',	'microvascular',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'downregulation',	'MCOA',	'Male Sprague-Dawley rats',	'NLRP3,Sirt1',	'Biommarker',	'10.1016/j.intimp.2017.06.029',	'mainly deals with NLRP3 based activation of autophagy and reservatols role',	'-'),
+											
+('MAP1LC3',	'Microtubule-associated proteins 1A/1B light chain 3B (LC3)',	'CARDIOLIPIN',	'Mitophagy',	'donwregulation required but increased with Hhcy diet',	'MCOA,western',	'Cell culture and mouse brain',	'LAMP2,ARP6V0A2,protease cathepsinD',	'Target',	'10.1038/cddis.2016.374',	'Vit B t herapy and its relevance to ER stress has been studied..mitophagy is based on the other related genes',	'-'),
+											
+('NME4',	'Non-metastatic cells 4','CARDIOLIPIN',	'Mitophagy',	'upregulation',	'-',	'invitro and in cellular systems',	'LC3',	'Target',	' 10.1038/labinvest.2017.113',	'-',	'-'),
+											
+('NME4',	'Non-metastatic cells 5','CARDIOLIPIN',	'Mitophagy',	'upregulation',	'In situ proximity ligation assay (PLA)',	' murine lung epithelial MLE-12 cells and human cervical adenocarcinoma HeLa cells',	'GTPase OPA1',	'Target',	' 10.1038/cdd.2015.160',	'-',	'-'),
+											
+('TAZ',		'Tafazzin','CARDIOLIPIN','Mitophagy',	'upregulation',	'-',	'Mitochondria in cells from Barth syndrome patients',	'-',	'Target',	' 10.1016/j.chemphyslip.2015.09.005',	'-',	'-'),
+											
+('TAZ',		'Tafazzin','CARDIOLIPIN','Mitophagy',	'upregulation',	'doxycycline-inducible knockdown of Taz',	'primary mouse embryonic fibroblasts (MEFs) ',	'-',	'Target',	' 10.1080/15548627.2015.1023984',	'-',	'-'),
+											
+('TAZ',		'Tafazzin','CARDIOLIPIN','Mitophagy',	'upregulation',	'synthetic genetic array screen',	' taz1? yeast cells',	'Yme1',	'Target',	' 10.1074/jbc.M115.641878',	'-',	'-'),
+											
+('HADHA',	'hydroxyacyl-CoA dehydrogenase/3-ketoacyl-CoA thiolase/enoyl-CoA hydratase (trifunctional protein), alpha subunit',	'FUNDC1',	'Mitophagy',	'neuroprotective',	'knock-out mice',	'mice',	'-',	'Target + Biomarker ',	'10.1177/0271678X16629153',	'T3-mediated neuro protection by stimulating astrocyte fatty acid oxidation and ATP production was also dependent on astrocytes expressing HADHA,suggesting the effect of HADHA is astrocyte mediated.',	'Drug: etomoxir'),
+											
+('HADHB',	'hydroxyacyl-CoA dehydrogenase/3-ketoacyl-CoA thiolase/enoyl-CoA hydratase (trifunctional protein), beta subunit',	'FUNDC1',	'Mitophagy',	'expression levels altered after ischemia',	'knock-out mice',	'mice',	'SIRT5',	'Biomarker',	'10.3389/fnins.2018.00032',	'Metabolite changes in SIRT5-/- coincided with alterations in expression of key enzymes in fatty acid (ACADS, HADHB) metabolic pathways.',	'-'),
+											
+('MAP1A',	'microtubule-associated protein 1A',	'FUNDC1',	'Mitophagy',	'Disintegrate after ischemia',	'Immunoelectron microscopic studies',	'gerbils',	'-',	'Biomarker',	'PMID: 1441921',	'After ischemia for 10 min, some dendrites in the stratum moleculare of the subiculum-CA1 region lost immunoreaction products for alpha-tubulin and MAPs (MAP1A & MAP2A).',	'-'),
+											
+('MAP1LC3B',	'microtubule-associated protein 1 light chain 3 beta',	'FUNDC1',	'Mitophagy',	'upreguation,neuroprotection',	' middle cerebral artery occlusion (MCAO) in rats',	'rat',	'Lamp1,Beclin 1',	'target',	' 10.1155/2018/4147502',	' XXMD exerted neuroprotective effect via downregulating LC3, Beclin1, Lamp1, and mitochondrial p62 expression level, thus leading to the inhibition of mitophagy.',	'-'),
+											
+('SQSTM1',	'sequestosome 1',	'FUNDC1',	'Mitophagy',	'upregulation for selective mimtophagy',	'Quantitative proteomics',	'',	'TBK1,',	'Target',	'10.1073/pnas.1523926113.',	' autophagy receptors optineurin (OPTN), NDP52 (CALCOCO2), TAX1BP1, and p62 (SQSTM1) are being enhanced via TBK1',	'-'),
+											
+('SQSTM1',	'sequestosome 1',	'FUNDC1',	'Mitophagy',	'upregulated/translocated to mito for mitophagy',	'tMCAO',	'Male Sprague-Dawley Rats',	'Beclin-1, LC3-II',	'Biomarker',	'10.1016/j.bbrc.2014.01.032',	'Usage of rapamysin drug to enhance mitophagy',	'-'),
+											
+('SQSTM1',	'sequestosome 1',	'FUNDC1',	'Mitophagy',	'downregulation protects MDEG G430F induced death - Ca+ ion influx',	'protein aggregation study',	'murine kidney epithelial cells ',	'LC3',	'Target',	'10.1074/jbc.M112.441063',	'DEG channel and Ca channel that influxes ions --> mitophagy',	'-'),
+											
+('SQSTM1',	'sequestosome 1',	'FUNDC1',	'Mitophagy',	'conflictng',	'',	'',	'LC3, VDAC1',	'Target but not necessary',	'20890124',	'only required for parkin induced clustering and not for the whole pathway',	'-'),
+											
+('ATG5',	'Autophagy related 5',	'PINK1&PARKIN',	'Mitophagy',	'upregulates autophagy',	'western blotting, immunofluorescence, RT-PCR, lucifease assay',	'rat',	'-',	'Biomarker',	'10.1159/000486224',	'the protein level of ATG5 was decreased by miR-9a-5p overexpression, but increased by miR-9a-5p inhibition',	'miRNA:miR-9a-5p'),
+											
+('USP8',	'Ubiquitin carboxyl-terminal hydrolase 8',	'PINK1&PARKIN',	'Mitophagy',	'downregulates apoptosis',	'-',	'rat',	'Nrdp1',	'Biomarker',	'10.3389/fncel.2017.00293',	'Nrdp1 upregulation is accompanied by increased protein ubiquitylation and decreased protein levels of ubiquitin-specific protease 8 (USP8) in OGD-treated neurons',	'-'),
+											
+('ATF4',	'Activating transcription factor 4(tax-responsive enhancer element B67)',	'PINK1&PARKIN',	'Mitophagy',	'upregulates oxidative stress induced death',	'-',	'mice',	'-',	'Target',	'10.1084/jem.20071460',	'ATF4 is a redox-regulated, prodeath transcriptional activator in the nervous system that propagates death responses to oxidative stress in vitro and to stroke in vivo.',	'-'),
+											
+('TFEB',	'Transcription factor EB',	'PINK1&PARKIN',	'Mitophagy',	'downregulation',	'-',	'rat',	'-',	'Target',	'10.1080/15548627.2018.1531196',	'neuron-specific overexpression of TFEB significantly enhanced ALP function and rescued the ischemic damage',	'-'),
+											
+('NBR1',	'Neighbor of BRCA1 gene 1 protein',	'PINK1&PARKIN',	'Mitophagy',	'upregulated by calycosin administration',	'RT-PCR, western blotting, Immunohistochemical analyses',	'rat',	'p62',	'Biomarker',	'10.1159/000487031',	'calycosin administration dramatically upregulated the expression of p62, NBR1 and Bcl-2, and downregulated the level of TNF-?',	'-'),
+											
+('TBK1',	'TANK-binding kinase 1',	'PINK1&PARKIN',	'Mitophagy',	'-',	'Elisa, Western blots',	'mouse',	'TRIF',	'Biomarker',	'10.1016/j.bbrc.2009.10.027',	'-',	'-'),
+											
+('VDAC1',	'Voltage-dependent anion-selective channel 1 (VDAC-1)',	'PINK1&PARKIN',	'Mitophagy',	'protects mitochondria',	'-',	'rat',	'VDAC2, VDAC3',	'Biomarker',	'10.1038/s41419-018-1089-5',	'ischemic postconditioning protects against mitochondrial damage by stabilizing VDACs. MiR-7 may be a potential therapeutic target for ischemic stroke.',	'miRNA: miR-7'),
+											
+('VDAC1',	'Voltage-dependent anion-selective channel 1 (VDAC-1)',	'PINK1&PARKIN',	'Mitophagy',	'expression downregulated by Picroside II',	'Middle cerebral artery occlusion, ELISA, hematoxylin-eosin staining, TUNEL, western blot.',	'rat',	'-',	'Biomarker',	'10.3760/cma.j.issn.0376-2491.2018.02.013',	'Picroside II could attenuate cerebral I/R injury by down-regulating the expression of VDAC1 and inhibiting the EndoG release from mitochondria into cytoplasm.',	'Drug: Picroside II'),
+											
+('VDAC1',	'Voltage-dependent anion-selective channel 1 (VDAC-1)',	'PINK1&PARKIN',	'Mitophagy',	'decreased VDAC1 by increasing miR-29a expression',	'-',	'hippocampal astrocytes',	'-',	'Biomarker',	'10.1016/j.mito.2016.08.013',	'-',	'miRNA: miR-29a'),
+											
+('VDAC1',	'Voltage-dependent anion-selective channel 1 (VDAC-1)',	'PINK1&PARKIN',	'Mitophagy',	'expression downregulated by Picroside II',	'modified neurological severity scale (mNSS), triphenyl tetrazolium chloride (TTC) staining, and enzyme-linked immunosorbent assay, spectrophotometry,hematoxylin-eosin staining and terminal deoxynucleotidyl transferase dUTP nick end labeling assay, immunohistochemical assay and western blot.',	'rats',	'-',	'Biomarker',	'10.1007/s12031-017-1012-z',	'Picroside II could attenuate cerebral I/R injury by downregulating the expression of VDAC1 and decreasing the permeability of mPTP, thereby inhibiting EndoG release from mitochondria into cytoplasm.',	'Drug: Picroside II'),
+											
+('OPA1',	'Dynamin-like 120 kDa protein, mitochondrial',	'PINK1&PARKIN',	'Mitophagy',	'upregulation favours neuroprotection',	' transient middle cerebral artery occlusion (tMCAO)',	'mice',	'Drp1',	'Target',	' 10.1002/jnr.23016',	'-',	'-'),
+											
+('MFN2',	'Mitofusin-2',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for neuroprotection',	' NR4A1-knockout mice invivo',	'mice',	'NR4A1',	'Target',	'10.1007/s11064-018-2618-4',	'-',	'-'),
+											
+('MFN2',	'Mitofusin-2',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for neuroprotection',	' oxygen-glucose deprivation/reperfusion to mimic cerebral I/R injury in vitro',	'Primary cultured neurons',	'nil',	'Target',	' 10.1159/000489621',	'-',	'-'),
+											
+('MFN2',	'Mitofusin-2',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for neuroprotection',	'middle cerebral artery occlusion (MCAO) invitro',	'  -',	'Drp1',	'   -',	' 10.1016/j.ejphar.2017.07.041',	'-',	'-'),
+											
+('PINK1',	'PTEN-induced kinase 1 (PINK1)',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for mitophagy(protection)',	'   -',	'OGD/R damaged hippocampal neurons ',	'parkin, LC3',	'  -',	' 10.1016/j.brainres.2018.06.028',	'-',	'-'),
+											
+('PINK1',	'PTEN-induced kinase 1 (PINK1)',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for protection',	'multiple in vitro and in vivo necroptotic stimuli',	'mice',	'PGAM5',	'Target',	' 10.1371/journal.pone.0147792',	'-',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for mitophagy(protection)',	'park2 knockout',	'mice',	'BNIP3L',	'target',	' 10.1080/15548627.2017.1357792',	'-',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation for mitophagy(protection)',	'1. middle cortical artery occlusion (MCAO) 2.oxygen-glucose deprivation (OGD)',	'1.mice 2. brain slices and neurons',	'  -',	'biomarker',	' 10.1080/15548627.2016.1274596',	'-',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	' oxygen-glucose deprivation/reperfusion (OGDR) ',	' Mouse neuroblastoma Neuro2a (N2a) cells',	'Drp1',	'target',	' 10.1155/2016/8474303',	' that parkin protects against OGDR insult through promoting degradation of Drp1',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	'1. transient middle cerebral artery occluded (tMCAO)  2. oxygen-glucose deprivation-reperfusion (OGD-Rep.)',	'1.Mice 2.neurons',	'Eif2s1,Atg7, Atf4',	'Biomarker and target',	' 10.4161/auto.32136',	'The PARK2-mediated mitophagy may be underlying the protection of ER stress',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	'middle cerebral artery occlusion and oxygen-glucose deprived cortical neurons in culture',	'mice',	'Atg7, Atg5',	'  -',	' 10.4161/auto.25132',	'-',	'-'),
+											
+('PARK2',	'parkin',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	'    -',	'mature cortical neurons',	'pink1',	'target',	' 10.1016/j.cub.2012.02.005',	'-',	'-'),
+											
+('DNM1L',	'Dynamin-1-like protein/Dynamin-related protein 1 (DRP1)',	'PINK1&PARKIN',	'Mitophagy',	'low regulation(protection)',	'oxygen-glucose deprivation/reperfusion (OGDR) insult',	' Mouse neuroblastoma Neuro2a (N2a) cells',	'parkin',	'target',	' 10.1155/2016/8474303',	'-',	'-'),
+											
+('DNM1L',	'Dynamin-1-like protein/Dynamin-related protein 1 (DRP1)',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(mitophagy)',	'oxygen glucose deprivation (OGD)',	'rat',	'  -',	'target',	' 10.1111/bph.13468',	'-',	'-'),
+											
+('DNM1L',	'Dynamin-1-like protein/Dynamin-related protein 1 (DRP1)',	'PINK1&PARKIN',	'Mitophagy',	'low regulation(protection)',	'application of p38 inhibitors',	'  -',	'MFF, ERK1, ERK2, GSK3B, P38mapk',	'target',	' 10.1016/j.neuint.2015.06.010',	'-',	'-'),
+											
+('DNM1L',	'Dynamin-1-like protein/Dynamin-related protein 1 (DRP1)',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	' transient middle cerebral artery occlusion (tMCAO) in mice',	'mice',	'opa1',	'target',	' 10.1002/jnr.23016',	'-',	'-'),
+											
+('DNM1L',	'Dynamin-1-like protein/Dynamin-related protein 1 (DRP1)',	'PINK1&PARKIN',	'Mitophagy',	'upregulation(protection)',	' permanent middle cerebral artery occlusion (pMCAO) and oxygen-glucose deprivation (OGD) ',	'rat',	'  -',	'Target',	' 10.1016/j.neuropharm.2014.07.002',	'-',	'-'),
+											
+('BNIP3L',	'BCL2/adenovirus E1B 19kDa interacting protein 3-like',	'NIX',	'Mitophagy',	'upregulates mitophagy and neuroprotrective',	'-',	'mice',	'PARK2',	'Target',	'10.1080/15548627.2017.1357792',	'BNIP3L could be a potential therapeutic target for ischemic stroke',	'-'),
+											
+('BNIP3L',	'BCL2/adenovirus E1B 19kDa interacting protein 3-like',	'NIX',	'Mitophagy',	'delayed neuronal loss',	'-',	'-',	'BNIP3',	'Target',	'10.1111/cns.12325',	'NIX primarily regulates basal level of mitophagy in physiological conditions, whereas BNIP3 exclusively activates excessive mitophagy leading to cell death',	'-'),
+											
+('NFKB1',	'nuclear factor of kappa light polypeptide gene enhancer in B-cells 1',	'NIX',	'Mitophagy',	'upregulates autophagy',	'-',	'-',	'RELA, STAT3',	'Biomarker',	'10.1007/s12264-015-1547-3',	'a module containing NFKB1, RELA, and STAT3 mediates autophagy, serving as a potential biomarker for the diagnosis and therapy of ischemic stroke',	'-'),
+											
+('PARK2',	'parkin RBR E3 ubiquitin protein ligase',	'NIX',	'Mitophagy',	'-',	'-',	'mice',	'BNIP3L',	'-',	'10.1080/15548627.2017.1357792',	'roles of BNIP3L-mediated mitophagy as being independent from PARK2',	'-'),
+											
+('PARK2',	'parkin RBR E3 ubiquitin protein ligase',	'NIX',	'Mitophagy',	'upregulates mitophagy and neuroprotrective',	'middle cortical artery occlusion (MCAO), oxygen-glucose deprivation (OGD)',	'mice, brain slices, neurons',	'-',	'Biomarker',	'10.1080/15548627.2016.1274596',	'PARK2-dependent APC-induced mitophagyrenders the brain resistant to ischemic injury',	'-'),
+											
+('PARK2',	'parkin RBR E3 ubiquitin protein ligase',	'NIX',	'Mitophagy',	'activates mitophagy and neuroprotective',	'middle cerebral artery occlusion and oxygen-glucose deprived cortical neurons',	'mice, neurons',	'Eif2s1,Atf4',	'Biomarker',	'10.4161/auto.32136',	'ER stress induced by TM and TG protects against the transient ischemic brain injury. The PARK2-mediated mitophagy may be underlying the protection of ER stress.',	'Drug-tunicamycin (TM) and thapsigargin (TG)'),
+											
+('PARK2',	'parkin RBR E3 ubiquitin protein ligase',	'NIX',	'Mitophagy',	'activates mitophagy and clears mitochondia, neuroprotective',	'middle cerebral artery occlusion and oxygen-glucose deprived cortical neurons',	'Mice',	'-',	'Biomarker',	'10.4161/auto.25132',	'The protective role of autophagy during reperfusion may be attributable to mitophagy-related mitochondrial clearance and inhibition of downstream apoptosis. PARK2 may be involved in the mitophagy process.',	'-'),
+											
+('PTEN',	'phosphatase and tensin homolog',	'NIX',	'Mitophagy',	'-',	'qRT-PCR, dual-luciferase reporter gene assay, RNA pull-down assay, western blot, RNA binding protein immunoprecipitation (RIP)',	'mice',	'SETD5-AS1',	'Biomarker',	'10.26355/eurrev_201809_15940',	'SETD5-AS1 participates in the development of ischemic stroke by activating PTEN and inhibiting PI3K/AKT pathway',	'-'),
+											
+('PTEN',	'phosphatase and tensin homolog',	'NIX',	'Mitophagy',	'PTEN inhibition promotes post-ischemic angiogenesis',	'western blotting analysis',	'human umbilical vein endothelial cells (HUVECs)',	'-',	'Target',	'10.1007/s11011-018-0276-5',	'PTEN inhibition promotes post-ischemic angiogenesis in HUVECs after exposure to oxygen-glucose deprivation (OGD) and this enhancing effect might be achieved through activation of the Akt signal cascade.',	'-'),
+											
+('PTEN',	'phosphatase and tensin homolog',	'NIX',	'Mitophagy',	'-',	'-',	'Adult male Sprague-Dawley (SD) rats ',	'Akt',	'Biomarker',	'10.1016/j.bbrc.2018.04.171',	'protective role of glycine on ICH rats, and suggest that the neuroprotective effect of glycine was mediated through PTEN/Akt signal pathway.',	'-');
