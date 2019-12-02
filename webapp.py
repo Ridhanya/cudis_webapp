@@ -48,6 +48,8 @@ def contact_us():
 @app.route("/data")
 def data():
 	return render_template('data.html')
+
+
  
 @app.route("/data_collect", methods=['POST','GET'])
 def data_collect():
@@ -103,6 +105,10 @@ def result_contact():
 def pradeep():
 	return render_template('pradeep.html')
 
+@app.route("/neelakandan")
+def neelakandan():
+	return render_template('neelakandan.html')
+
 @app.route("/sairam")
 def sairam():
 	return render_template('sairam.html')
@@ -128,6 +134,20 @@ def raidha():
 @app.route("/drrajanikanth")
 def drrajinikanth():
 	return render_template('rajanikanth.html')
+
+@app.route("/result")
+def result_again():
+	return render_template('list.html')
+
+@app.route("/genelist")
+def genelist():
+	con = sql.connect(database)
+	con.row_factory =sql.Row
+	cur=con.cursor()
+	cur.execute("select distinct gene from MITO")
+	row=cur.fetchall()
+
+	return render_template('genelist.html',row=row)
 
 	
 if __name__ == '__main__':
