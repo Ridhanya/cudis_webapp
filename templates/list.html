@@ -1,37 +1,64 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CuDIS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/b_data_style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class="Basic_style">
+  <div>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="navbar-brand header_style_nav">CuDIS</h2>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('data')}}">Search</a></li>
+      
+      <li><a href="{{url_for('home_again')}}">Home</a></li>
+      <li class="active"><a href="#">Results</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
    <body>
       <table border = 1>
          <thead>
-            <td>GENE</td>
-            <td>PROTEIN</td>
-            <td>PATHWAY</td>
-            <td>FUNCTION_M</td>
-            <td>REGULATION</td>
-            <td>HTS_MTS</td>
-            <td>ORGANISM</td>
-            <td>RELATED_GENES</td>
-            <td>BIOMARKER</td>
-            <td>REFERENCES</td>
-            <td>EXTRA_INFO</td>
-            <td>OTHER_RELATIONS</td>
+            <td style="text-align:center"><b>GENE</b></td>
+            <td style="text-align:center"><b>PROTEIN</b></td>
+            <td style="text-align:center"><b>PATHWAY</b></td>
+            <td style="text-align:center"><b>FUNCTION_M</b></td>
+            <td style="text-align:center"><b>REGULATION</b></td>
+            <td style="text-align:center"><b>HTS_MTS</b></td>
+            <td style="text-align:center"><b>ORGANISM</b></td>
+            <td style="text-align:center"><b>RELATED_GENES</b></td>
+            <td style="text-align:center"><b>BIOMARKER</b></td>
+            <td style="text-align:center"><b>REFERENCES</b></td>
+            <td style="text-align:center"><b>EXTRA_INFO</b></td>
+            <td style="text-align:center"><b>OTHER_RELATIONS</b></td>
 
          </thead>
          
          {% for r in row %}
             <tr>
-               <td>{{r["GENE"]}}</td>   
-               <td>{{r["PROTEIN"]}}</td>
-               <td>{{r["PATHWAY"]}}</td>
-               <td>{{r["FUNCTION_M"]}}</td>
-               <td>{{r["REGULATION"]}}</td>
-               <td>{{r["HTS_MTS"]}}</td>
-               <td>{{r["ORGANISM"]}}</td>
-               <td>{{r["RELATED_GENES"]}}</td>
-               <td>{{r["BIOMARKER"]}}</td>
-               <td>{{r["REFERENCES"]}}</td>
-               <td>{{r["EXTRA_INFO"]}}</td>
-               <td>{{r["OTHER_RELATIONS"]}}</td>
+               <td style="text-align:center">{{r["GENE"]}}</td>   
+               <td style="text-align:center">{{r["PROTEIN"]}}</td>
+               <td style="text-align:center">{{r["PATHWAY"]}}</td>
+               <td style="text-align:center">{{r["FUNCTION_M"]}}</td>
+               <td style="text-align:center">{{r["REGULATION"]}}</td>
+               <td style="text-align:center">{{r["HTS_MTS"]}}</td>
+               <td style="text-align:center">{{r["ORGANISM"]}}</td>
+               <td style="text-align:center">{{r["RELATED_GENES"]}}</td>
+               <td style="text-align:center">{{r["BIOMARKER"]}}</td>
+               <td style="text-align:center">{{r["REFERENCES"]}}</td>
+               <td style="text-align:center">{{r["EXTRA_INFO"]}}</td>
+               <td style="text-align:center">{{r["OTHER_RELATIONS"]}}</td>
             </tr>
          {% endfor %}
       </table>
