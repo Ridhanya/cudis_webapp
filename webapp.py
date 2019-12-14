@@ -65,7 +65,14 @@ def data_collect():
 		#for i in range(0,len(row1)):
 		#	if(inptext==row1[i]):
 		cur.execute("select * from mito where gene=?",(inptext,))
+		#row_count=cur.execute("select * from mito where gene=?",(inptext,))
 		row=cur.fetchall()
+		if(len(row)==0):
+			return(render_template("not_found.html"))
+		#if(row_count==0):
+		#	row=cur.fetchnone()
+		#else:
+		#	return("failed")
 	#return render_template("list.html",row = row)
         
 		#mysql=MySQL(app)
@@ -154,6 +161,8 @@ def genelist():
 	row=cur.fetchall()
 
 	return render_template('genelist.html',row=row)
+
+
 
 	
 if __name__ == '__main__':
