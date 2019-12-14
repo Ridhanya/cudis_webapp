@@ -55,7 +55,8 @@ def data():
 def data_collect():
 	#curr=mysql.connection.cursor()
 	if (request.method=="POST"):
-		inptext=request.form["gene"]
+		inptext_pre=request.form["gene"]
+		inptext=inptext_pre.upper()
 
 		con = sql.connect(database)
 		con.row_factory =sql.Row
@@ -162,7 +163,33 @@ def genelist():
 
 	return render_template('genelist.html',row=row)
 
+@app.route("/tflist")
+def tflist():
+	con = sql.connect(database)
+	con.row_factory=sql.Row
+	cur=con.cursor()
+	cur.execute("select * from tf")
+	row=cur.fetchall()
+	return render_template('tflist.html',row=row)
 
+@app.route("/drug_table")
+def drug_table():
+	con = sql.connect(database)
+	con.row_factory=sql.Row
+	cur=con.cursor()
+	cur.execute("select * from drugs")
+
+	row=cur.fetchall()
+	return render_template("drug.html",row=row)
+
+@app.route("/mirna")
+def mirna():
+	con = sql.connect(database)
+	con.row_factory=sql.Row
+	cur=con.cursor()
+	cur.execute("select * from mirna")
+	row=cur.fetchall()
+	return render_template("mirna.html",row=row)
 
 	
 if __name__ == '__main__':
