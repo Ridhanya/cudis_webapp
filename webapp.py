@@ -1,10 +1,10 @@
 from flask import Flask,redirect,url_for,request,render_template,make_response
 from flask_mysqldb import MySQL
 from flask_mail import Mail, Message
-import cx_Oracle
+#import cx_Oracle
 import sqlite3 as sql
 app = Flask(__name__,template_folder='templates',static_folder='static')
-database="C:\\sqlite\\cudis.db"
+database="C:\\sqlite3\\cudis.db"
 
 """mysql = MySQL(app)
 #app = Flask(__name__,template_folder='templates',static_folder='static')
@@ -56,11 +56,17 @@ def data_collect():
 	#curr=mysql.connection.cursor()
 	if (request.method=="POST"):
 		inptext=request.form["gene"]
+
 		con = sql.connect(database)
 		con.row_factory =sql.Row
 		cur=con.cursor()
-		cur.execute("select * from MITO where gene=?",(inptext,))
+		#cur.execute("select gene from mito")
+		#row1=cur.fetchall()
+		#for i in range(0,len(row1)):
+		#	if(inptext==row1[i]):
+		cur.execute("select * from mito where gene=?",(inptext,))
 		row=cur.fetchall()
+	#return render_template("list.html",row = row)
         
 		#mysql=MySQL(app)
 		#app.config['MYSQL_DATABASE_USER'] = 'Ridhanya'
