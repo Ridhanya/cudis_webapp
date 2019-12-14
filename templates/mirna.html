@@ -17,54 +17,42 @@
       <h2 class="navbar-brand header_style_nav">CuDIS</h2>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Search</a></li>
+      <li><a href="{{url_for('data')}}">Search</a></li>
       
       <li><a href="{{url_for('home_again')}}">Home</a></li>
-      <li ><a href="#">Results</a></li>
+      <!--li class="active"><a href="#">Results</a></li-->
     </ul>
   </div>
 </nav>
 </div>
- <div class="form-style-data">
-<div class="container col-md-4 col-md-offset-4 ">
-  <h2 class="header">Organelle-Mitochondria</h2>
-  <form action="{{url_for('data_collect')}}" method="POST">
-    <div class="form-group">
-      <label for="text">Gene:</label>
-      <input type="text" class="form-control" id="text" placeholder="Enter gene name" name="gene">
-    </div>
-    
-    <!--div class="checkbox">
-      <label><input type="checkbox" name="history">show history</label>
-    </div-->
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
-</div>
-</div> 
 
-
- <body>
+   <body>
       <table border = 1>
          <thead>
             <td style="text-align:center"><b>GENE</b></td>
+            <td style="text-align:center"><b>miRNA</b></td>
             
 
          </thead>
          
          {% for r in row %}
+         
             <tr>
-               <td style="text-align:center">{{r["GENE"]}}</td>   
+               <td style="text-align:center">{{r["Gene"]}}</td>   
+               <td style="text-align:center">{{r["miRNA"]}}</td>
                
             </tr>
          {% endfor %}
       </table>
-     </body>
-<div>
+      
+      
+   </body>
+
+   <div>
+  <li><a href="{{url_for('genelist')}}">LIST OF AVAILABLE GENES</a></li>
   <li><a href="{{url_for('tflist')}}">LIST OF TRANSCRIPTION FACTOR</a></li>
   <li><a href="{{url_for('drug_table')}}">DRUG LIST</a></li>
-  <li><a href="{{url_for('mirna')}}">miRNA DATA</a></li>
   <li><a href="{{url_for('data')}}">RETURN BACK TO NORMAL</a></li></div>
   <li><a href="{{url_for('home_again')}}">RETURN TO HOME</a></li>
 </div>
-   
 </html>

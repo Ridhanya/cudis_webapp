@@ -46,21 +46,21 @@
  <body>
       <table border = 1>
          <thead>
-            <td style="text-align:center"><b>GENE</b></td>
+            <td style="text-align:center"><b>Transcription Factors</b></td>
             
 
          </thead>
          
          {% for r in row %}
             <tr>
-               <td style="text-align:center">{{r["GENE"]}}</td>   
+               <td style="text-align:center">{{r["Transcription Factors"]}}</td>   
                
             </tr>
          {% endfor %}
       </table>
      </body>
 <div>
-  <li><a href="{{url_for('tflist')}}">LIST OF TRANSCRIPTION FACTOR</a></li>
+  <li><a href="{{url_for('genelist')}}">LIST OF AVAILABLE GENES</a></li>
   <li><a href="{{url_for('drug_table')}}">DRUG LIST</a></li>
   <li><a href="{{url_for('mirna')}}">miRNA DATA</a></li>
   <li><a href="{{url_for('data')}}">RETURN BACK TO NORMAL</a></li></div>
