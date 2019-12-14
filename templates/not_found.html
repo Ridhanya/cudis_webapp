@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CuDIS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/b_data_style.css')}}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class="Basic_style">
+  <div>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h2 class="navbar-brand header_style_nav">CuDIS</h2>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="{{url_for('data')}}">Search</a></li>
+      
+      <li><a href="{{url_for('home_again')}}">Home</a></li>
+      <li class="active"><a href="#">Results</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+<div class="not_found">
+  <h1>NOT FOUND</h1>
+  <li><a href="{{url_for('data')}}">return to search</a></li></div>
+  <li><a href="{{url_for('home_again')}}">return to home</a></li>
+</div>
