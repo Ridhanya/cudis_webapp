@@ -46,19 +46,20 @@
          </thead>
          
          {% for r in row %}
+         
             <tr>
-               <td style="text-align:center">{{r["GENE"]}}</td>   
-               <td style="text-align:center">{{r["PROTEIN"]}}</td>
-               <td style="text-align:center">{{r["PATHWAY"]}}</td>
-               <td style="text-align:center">{{r["FUNCTION_M"]}}</td>
-               <td style="text-align:center">{{r["REGULATION"]}}</td>
-               <td style="text-align:center">{{r["HTS_MTS"]}}</td>
-               <td style="text-align:center">{{r["ORGANISM"]}}</td>
-               <td style="text-align:center">{{r["RELATED_GENES"]}}</td>
-               <td style="text-align:center">{{r["BIOMARKER"]}}</td>
-               <td style="text-align:center">{{r["REFERENCES"]}}</td>
-               <td style="text-align:center">{{r["EXTRA_INFO"]}}</td>
-               <td style="text-align:center">{{r["OTHER_RELATIONS"]}}</td>
+               <td style="text-align:center">{{r["gene"]}}</td>   
+               <td style="text-align:center">{{r["protein"]}}</td>
+               <td style="text-align:center">{{r["pathway"]}}</td>
+               <td style="text-align:center">{{r["function_m"]}}</td>
+               <td style="text-align:center">{{r["regulation"]}}</td>
+               <td style="text-align:center">{{r["hts_mts"]}}</td>
+               <td style="text-align:center">{{r["organism"]}}</td>
+               <td style="text-align:center">{{r["related_genes"]}}</td>
+               <td style="text-align:center">{{r["biomarker"]}}</td>
+               <td style="text-align:center">{{r["reference_s"]}}</td>
+               <td style="text-align:center">{{r["extra_info"]}}</td>
+               <td style="text-align:center">{{r["other_relations"]}}</td>
             </tr>
          {% endfor %}
       </table>
